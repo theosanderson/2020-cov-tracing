@@ -19,12 +19,16 @@ Here we have made two [small changes](https://github.com/adamkucharski/2020-cov-
 
 Secondly, we attempt to add isolation and manual contact-tracing to the model alongside the mass-testing intervention. It seems perverse to perform mass-testing and then fail to trace the contacts of people identified through it, many of whom will be in the pre-infectious incubation phase.
 
-We are not convinced we have adequately modelled the full effect of quarantining the contacts of anyone who tests positive under mass-testing (see issue X). Nevertheless, the changes made here result in an R<sub>eff</sub> of 0.92, lower than any of the other scenarios and without the need for social distancing.
+We are not convinced we have adequately modelled the full effect of quarantining the contacts of anyone who tests positive under mass-testing (see [issue #1](https://github.com/theosanderson/2020-cov-tracing/issues/1)). Nevertheless, the changes made here result in an R<sub>eff</sub> of 0.92, lower than any of the other scenarios and without the need for social distancing.
 
 
 ## Conclusions
 
 If we are more optimistic about the ability to perform mass-testing, and we are prepared to pair it with contact tracing and isolation, then mass-testing may very well have a role to play in controlling COVID-19, which enabling life to largely proceed as normal.
+
+## Credit
+
+99.99% of this code is by the original authors. This re-analysis is only possible because they have made their code available.
 
 ## Warning
 
