@@ -1,4 +1,4 @@
-# Mass-testing can contribute to controlling COVID-19
+# Mass-testing may contribute to controlling COVID-19
 
 TLDR: although a previous model has suggested mass-testing to be ineffective in controlling COVID-19, if we adjust the parameter for the scale of testing, and combining the approach with contact tracing, the model predicts that R can be reduced below 1 without social distancing.
 
