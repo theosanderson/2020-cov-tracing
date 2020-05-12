@@ -205,9 +205,11 @@ offspring_model <- function(max_low_fix = 4, # Social distancing limit in these 
         inf_period_ii <- inf_period
       }
       
+      
       # Set infectious period for population testing
       if(scenario_pick=="pop_testing" & runif(1)<p_pop_test){
-        inf_period_ii <- sample(c(0:inf_period,5),1) # Include extra day to reflect week
+        inf_period_ii_alternative <- sample(c(0:inf_period,5),1) # Include extra day to reflect week
+        inf_period_ii <- min(inf_period_ii,inf_period_ii_alternative) # Approximation(?): pick smallest infectious period, either from testing or from default
         tested_T <- T
       }
 
@@ -278,7 +280,7 @@ offspring_model <- function(max_low_fix = 4, # Social distancing limit in these 
       work_averted <- rbinom(1,work_infect,prob=ww_trace*met_before_w*trace_adherence)
       other_averted <- rbinom(1,other_infect,prob=met_before_o*other_trace*trace_adherence)
       
-      if(tested_T==T & symp_T==T & do_tracing==T ){
+      if(tested_T==T & symp_T==T  & do_tracing==T ){
         total_averted <- home_averted+work_averted+other_averted
       }else{
         total_averted <- 0
