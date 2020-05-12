@@ -62,7 +62,7 @@ offspring_model <- function(max_low_fix = 4, # Social distancing limit in these 
   p_symptomatic <- prob_symp
   transmission_asymp <- prob_t_asymp
   phone_coverage <- 1 # App coverage in non-app scenarios
-  p_pop_test <- 0.05 # Proportion mass tested (5% per week)
+  p_pop_test <- 0.37 # Proportion mass tested (5% per week)
   inf_period <- 5 # Infectious period
   
   # Define default scenarios
@@ -160,8 +160,8 @@ offspring_model <- function(max_low_fix = 4, # Social distancing limit in these 
     }
 
     if(scenario_pick=="pop_testing"){
-      do_isolation <- F
-      do_tracing <- F
+      do_isolation <- T
+      do_tracing <- T
     }
     
     if(scenario_pick=="pt_extra"){
@@ -288,7 +288,7 @@ offspring_model <- function(max_low_fix = 4, # Social distancing limit in these 
       
       # Trace contacts-of-contacts (i.e. people who were infected before detection)
       
-      if(scenario_pick=="no_measures" | scenario_pick=="pop_testing" | scenario_pick=="isolation_only"){
+      if(scenario_pick=="no_measures" | scenario_pick=="isolation_only"){
         total_traced <- 0
       }
       
@@ -300,7 +300,7 @@ offspring_model <- function(max_low_fix = 4, # Social distancing limit in these 
       }
       if(scenario_pick=="isolation_manual_tracing_met_only" | scenario_pick=="isolation_manual_tracing_met_limit" | 
          scenario_pick== "isolation_manual_tracing" | scenario_pick== "cell_phone" | 
-         scenario_pick=="cell_phone_met_limit"){
+         scenario_pick=="cell_phone_met_limit" |  scenario_pick=="pop_testing"){
         total_traced <- home_traced + work_traced + other_traced 
       }
         
@@ -575,9 +575,9 @@ plot_contacts <- function(dir_pick){
   
   # - - - - - - - - - - - - - - - - - - - - - - - - - 
   # Plot by other contact limit scenarios
-  label_list <- c("— Self-isolation + App-based tracing, 0% WFH",
+  label_list <- c("- Self-isolation + App-based tracing, 0% WFH",
                   "- - SI + App-based tracing, 50% WFH",
-                  "— SI + manual tracing (acquaintance only), 0% WFH",
+                  "- SI + manual tracing (acquaintance only), 0% WFH",
                   "- - SI + Manual tracing (acquaintance only), 50% WFH")
   
   store_dat0 <- store_dat %>% filter(trace_p==0.95 & app_cov==0.53 & limit_other!=4) %>% arrange(limit_other)
@@ -661,7 +661,7 @@ plot_contacts <- function(dir_pick){
   # - - - - - - - - - - - - - - - - - - - - - - - - - 
   # Plot by app coverage
   
-  label_list <- c("— SI + app-based tracing",
+  label_list <- c("- SI + app-based tracing",
                   "- - SI + app-based (max 4 other contacts)")
   
   store_dat0 <- store_dat %>% filter(limit_other==4 & wfh==0 & app_cov!=0.53 & trace_p==0.95) %>% arrange(app_cov)
