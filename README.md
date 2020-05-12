@@ -15,7 +15,7 @@ The paper concludes that mass-testing can contribute little. The only scenario m
 
 ## Changes made here
 
-Here we have made two small changes to the code to enhance the effectiveness of mass-testing. Firstly we substantially increase the proportion of the population that can be tested each week, from 5% to 37%. This is based on a [proposal for mass-decentralised testing in schools and workplaces](http://theo.io/blog/2020/04/19/community-testing-for-covid-19-reaching-25-million-tests-per-week/).
+Here we have made two [small changes](https://github.com/adamkucharski/2020-cov-tracing/compare/master...theosanderson:master) to the code to enhance the effectiveness of mass-testing. Firstly we substantially increase the proportion of the population that can be tested each week, from 5% to 37%. This is based on a [proposal for mass-decentralised testing in schools and workplaces](http://theo.io/blog/2020/04/19/community-testing-for-covid-19-reaching-25-million-tests-per-week/).
 
 Secondly, we attempt to add isolation and manual contact-tracing to the model alongside the mass-testing intervention. It seems perverse to perform mass-testing and then fail to trace the contacts of people identified through it, many of whom will be in the pre-infectious incubation phase.
 
