@@ -28,7 +28,7 @@ Secondly, we **attempt** to add isolation and manual contact-tracing to the mode
 
 ## Conclusions
 
-If we are more optimistic about the ability to perform mass-testing, and we are prepared to pair it with contact tracing and isolation, then mass-testing may have a role to play in controlling COVID-19, which enabling life to largely proceed as normal. If we are considering whether to build capacity for mass testing, we should evaluate the possible reduction in R for whatever capacity we are considering, and should acknowledge that mass-testing will always work much better when paired with contact tracing.
+If we are more optimistic about the ability to perform mass-testing, and we are prepared to pair it with contact tracing and isolation, then mass-testing may have a role to play in controlling COVID-19, while enabling life to largely proceed as normal. If we are considering whether to build capacity for mass testing, we should evaluate the possible reduction in R for whatever capacity we are considering, and should acknowledge that mass-testing will always work much better when paired with contact tracing.
 
 ## Credit
 
